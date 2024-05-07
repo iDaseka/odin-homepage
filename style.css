@@ -1,0 +1,249 @@
+:root{
+    font-size: clamp(1rem, calc(1rem + ((0.75vw - 0.01rem) * 0.6289)), 1.75rem);
+    line-height: 1.25rem;
+    min-height: 0vw;
+}
+
+body{
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
+
+#header{
+    grid-row: 1;
+    background-color: #3e5077;
+    transform: skewY(-5deg) translateY(-14rem);
+    transform-origin: top right;
+    box-shadow: 0 0.3rem 0.3rem 0 rgb(20, 20, 20);
+}
+
+#about-section{
+    transform: skewY(5deg) translateY(12rem);
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+img{
+    max-width: 100%;
+    width: 95%;
+    margin: 2% 0%;
+    min-width: 15rem;
+}
+
+#about-image{
+    display: flex;
+    justify-self: end;
+    grid-column: 1;
+    box-shadow: 0rem 0.2rem 0.2rem 0.2rem rgb(20, 20, 20);
+
+}
+
+#about-text{
+    background-color: white;
+    grid-column: 2;
+    box-shadow: 0.2rem 0.2rem 0.4rem rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0rem 0.5rem;
+    max-height: 15rem;
+    font-size: 0.6rem;
+}
+
+#about-text h1{
+    padding: 0.4rem 0rem;
+    margin: 0rem;
+    font-size: 0.75rem;
+}
+
+#about-text p{
+    line-height: 1rem;
+    margin: 0;
+}
+
+#about-icons{
+    display: flex;
+    justify-content: end;
+}
+
+#content{
+    grid-row: 2;
+    padding: 1.5rem;
+}
+
+.image-template{
+    color: white;
+    font-weight: light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+}
+
+#cards{
+    font-weight: light;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 3rem;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 2rem;
+    padding: 1rem 0;
+}
+
+.place-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-container{
+    box-shadow: 0 0.5vh 5px 0 rgb(20, 20, 20);
+    border-radius: 0.3rem;
+}
+
+.place-info{
+    padding: 0 2vw ;
+}
+
+#footer{
+    grid-row: 3;
+    background-color: #3e5077;
+}
+
+#contact-section{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    font-weight: lighter;
+}
+
+#contact-text{
+    color: white;
+    grid-column: 1;
+}
+
+#contact, #mail{
+    display: flex;
+    align-items: center;
+}
+
+#contact-image{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    grid-column: 2;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(20, 20, 20);
+}
+
+
+@media (max-width:425px){
+    #header{
+        transform: skewY(-5deg) translateY(-23rem);
+    }
+    
+    #about-section{
+        transform: skewY(5deg) translateY(23rem);
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0rem;
+        grid-gap: 1rem;
+    }
+
+    #about-text{
+        padding: 0;
+        box-shadow: none;
+    }
+
+    #about-icons{
+        justify-content: center;
+    }
+
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0rem;
+    }
+
+    .image-template{
+        height: 9.5rem;
+    }
+
+    #cards{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1rem;
+        width: 14rem;
+    }
+
+    #contact-section{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #contact-text{
+        padding: 1rem;
+    }
+    #contact-section h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    #contact-section svg{
+        display: none;
+        padding: 0;
+    }
+
+}
+
+@media (max-width:768px){
+    #header{
+        transform: skewY(-5deg) translateY(-20rem);
+    }
+    #about-section{
+        transform: skewY(5deg) translateY(15rem);
+        display:flex;
+        flex-direction: column;
+    }
+
+    #about-image{
+        box-shadow: 0rem 0.1rem 0.1rem 0.1rem rgb(20, 20, 20);
+    }
+
+    #about-text{
+        box-shadow: none;
+    }
+
+    #about-icons{
+        justify-content: center;
+    }
+
+    #cards{
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    #contact-text{
+        padding: 1rem;
+    }
+    #contact-section h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    #contact-section{
+        display: flex;
+        flex-direction: column;
+    }
+}
